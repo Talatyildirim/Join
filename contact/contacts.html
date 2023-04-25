@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join</title>
+    <link rel="icon" href="../img/icons/blue-logo.png">
+    <link rel="stylesheet" href="../contact/css/fonts.css">
+    <link rel="stylesheet" href="../contact/css/contacts.css">
+    <link rel="stylesheet" href="../contact/css/nav-sidebar.css">
+    <link rel="stylesheet" href="../fonts-inter/fonts-inter.css">
+    <link rel="stylesheet" href="../contact/css/responsiv.css">
+    <script src="../contact/js/contacts.js"></script>
+    <script src="../contact/js/overlay.js"></script>
+    <script src="../contact/js/mini_backend.js"></script>
+    <script src="../contact/js/nav-sidebar.js"></script>
+    <script>
+        setURL('https://talat-yildirim.developerakademie.net/join/smallest_backend_ever')
+    </script>
+</head>
+
+<body onload="initContacts()">
+    <div w3-include-html="../nav-sidebar/contact/nav-sidebar.html"></div>
+    <div class="background-div">
+        <div class="contacts-box" id="contacts"></div>
+        <div class="edit-contact" id="edit-contact"></div>
+        <div class="overlay-contact" id="overlay-contact"></div>
+        <div class="contacts-div-box" id="contacts-div-box">
+            <div class="contacts-div-box-name">
+                <h3 class="contacts-name">Contacts</h3>
+                <img class="contacts-name-img" src="../img/Vector 5.png">
+                <h4 class="better-with">Better with a team</h4>
+                <img class="contact-name-img" src="../img/Vector5.png">
+            </div>
+            <div class="contact-data" id="contact-data"></div>
+        </div>
+    </div>
+    <div id="dialog" class="dialog-gb d-none">
+        <div id="new-contact" class="overlay-new-contact">
+            <div class="new-contact-overlay-left">
+                <img src="../img/Capa.png" class="join-img">
+                <h2 class="add-contact-overlay">Add contact</h2>
+                <h4 class="new-contact-overlay-text">Tasks are better with a team!</h4>
+                <img class="overlay-line" src="../img/Vector5.png">
+            </div>
+            <div class="new-contact-overlay">
+                <img src="../img/Vector.png" class="close-x" onclick="closeOverlay()">
+                <img src="../img/Group11.png" class="closed-x" onclick="closeOverlay()">
+                <div>
+                    <img class="new-contact-overlay-img" src="../img/Frame 79.png">
+                </div>
+                <form class="new-contact-overlay-input" onsubmit="createContact();return false" onclick="openPopup()">
+                    <div class="overlay-input-div">
+                        <div class="input-overlay-div">
+                            <input required type="text" class="overlay-input" placeholder="First-name" id="first-name">
+                            <img src="../img/Vector-name.png" class="overlay-input-name-img">
+                        </div>
+                    </div>
+                    <div class="overlay-input-div">
+                        <div class="input-overlay-div">
+                            <input required type="text" class="overlay-input" placeholder="Last-name" id="last-name">
+                            <img src="../img/Vector-name.png" class="overlay-input-name-img">
+                        </div>
+                    </div>
+                    <div class="overlay-input-div">
+                        <div class="input-overlay-div">
+                            <input required type="email" class="overlay-input" placeholder="Email" id="email">
+                            <img src="../img/Vector-email.png" class="overlay-input-name-img">
+                        </div>
+                    </div>
+                    <div class="overlay-input-div">
+                        <div class="input-overlay-div">
+                            <input required type="number" min="0" class="overlay-input" placeholder="Phone" id="phone">
+                            <img src="../img/Vector-phone.png" class="overlay-input-name-img">
+                        </div>
+                    </div>
+                    <div class="overlay-contact-button">
+                        <div>
+                            <button class="overlay-button-cancel-div" onclick="closeOverlay()">
+                                <h3 class="overlay-button-cancel">Cancel</h3>
+                                <img src="../img/Vector.png">
+                            </button>
+                        </div>
+                        <div class="overlay-button-create-contact-box">
+                            <button class="overlay-button-create-contact-div" id="overlay-button-create-contact-div">
+                                <h3 class="overlay-button-create-contact">Create contact</h3>
+                                <img src="../img/Vector-ok.png">
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="new-contact-div">
+        <button class="new-contact" id="new-contact" onclick="openNewContact(), openDialog()">
+            <h3 class="new-contact-name">New contact</h3>
+            <img class="capa" src="../img/Capa 1.png">
+        </button>
+    </div>
+
+
+    <div id="popup-contact" class="d-none popup-contact">
+        <p class="popup-contact-p">
+          Contact succesfully created
+        </p>
+      </div>
+</body>
+
+</html>
